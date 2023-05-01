@@ -1,8 +1,8 @@
-import "./scss/style.scss";
+import './scss/style.scss';
+import App from './components/app';
 
-const heading = document.createElement('h1');
-heading.textContent = 'Virtual Keyboard!';
+const app = new App();
 
-// добавляем заголовок в DOM
-const root = document.body;
-root.append(heading);
+window.onload = () => {
+  app.output();
+};
