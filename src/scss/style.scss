@@ -1,0 +1,71 @@
+$font-size: 1rem;
+$font: Arial;
+$font-color-l: #ffffff;
+$font-color-d: #000000;
+$body-color: #7e7e7e;
+
+html {
+    font-size: $font-size;
+    color: $font-color-l;
+    line-height: 1;
+}
+
+body {
+    font-family: $font;
+    display: grid;
+    grid-gap: 1rem;
+    justify-content: center;
+    background-color: $body-color;
+}
+
+.textarea-wrapper textarea {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 900px;
+    height: 220px;
+    text-rendering: auto;
+    color: $font-color-l;
+    -webkit-appearance: textarea;
+    background-color: #b4b4b4;
+    resize: auto;
+    margin: 0em;
+    font-weight: 400;
+    font-size: 1.2rem;
+    border-width: 0px;
+    padding: 1rem;
+}
+
+.keyboard {
+    display: grid;
+    padding: 1rem;
+    grid-gap: 0.4rem;
+    grid-template-columns: repeat(14, 1fr);
+    max-width: 900px;
+}
+
+.keyboard .key {
+    -webkit-appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: $font-color-l;
+    display: inline-block;
+    text-align: center;
+    cursor: default;
+    background-color: #191919;
+    box-sizing: border-box;
+    margin: 0em;
+    padding: 1rem 0.8rem;
+    border-width: 0px;
+    border-radius: 0.3rem;
+    position: relative;
+}
+
+.keyboard .key:hover {
+    background-color: #9ceefb;
+    color: #191919;
+    cursor: pointer;
+}
+.keyboard .key:active {
+    color:$font-color-d;
+    background-color: #5cdff4;
+}
