@@ -13,15 +13,13 @@ export default class App {
     Object.keys(keys).forEach(keyName => {
       const keyData = keys[keyName];
       const keyElement = document.createElement('div');
-      keyElement.classList.add('key');
-      keyElement.dataset.key = keyName;
-      keyElement.dataset.layout = 'EN';
-
       const position = keyData.position.split('*');
       const row = position[0];
       const coll = position[1];
       const length = position[2];
-
+      keyElement.classList.add('key');
+      keyElement.dataset.key = keyName;
+      keyElement.dataset.layout = 'EN';
       keyElement.style.gridRow = row;
       keyElement.style.gridColumn = `${coll} / span ${length}`;
 
@@ -31,7 +29,6 @@ export default class App {
         console.error(`Missing EN value property for key ${keyName}`);
       }
 
-      console.log(keyName, keyData);
       keyboardContainer.appendChild(keyElement);
     });
     document.body.appendChild(keyboardContainer);

@@ -60,6 +60,11 @@ body {
     position: relative;
 }
 
+.keyboard .key:hover {
+    background-color: #9ceefb;
+    color: #191919;
+    cursor: pointer;
+}
 .keyboard .key:active {
     color:$font-color-d;
     background-color: #5cdff4;
